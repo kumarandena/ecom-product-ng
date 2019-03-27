@@ -19,20 +19,20 @@
           {{product.description}}
         </p>
         <p>
-          HEIGHT : {{product.height}}
+          WIDTH : {{product.width}}
         </p>
         <p>
-          WIDTH : {{product.width}}
+          HEIGHT : {{product.height}}
         </p>
       </mat-card-content>
       <mat-card-actions style="text-align: center;">
-        <button mat-raised-button color="warn" (click)="onDelete()">Delete</button>
+        <button mat-raised-button color="warn" (click)="onDelete(i, product.name)">Delete</button>
         <button mat-raised-button (click)="openDialog(i,product)">Edit</button>
       </mat-card-actions>
     </mat-card>
   </div>
   
-  <div style="text-align: center;">
+  <!-- <div style="text-align: center;">
     <a mat-button style="color: white; font-size: 20px;" rel="noopener noreferrer" target="_blank"
       href="https://kumarandena.github.io/">@kumarandena</a>
-  </div>
+  </div> -->
