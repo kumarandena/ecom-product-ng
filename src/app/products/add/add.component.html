@@ -1,0 +1,41 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Add Product</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="example-container add-cus-div">
+  <form class="example-container" [formGroup]="myForm">
+
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="" required formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <input matInput placeholder="" formControlName="description">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Height</mat-label>
+      <input matInput placeholder="" formControlName="height">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Width</mat-label>
+      <input matInput placeholder="" formControlName="width">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select required formControlName="issmart">
+        <mat-option value="Yes">Yes</mat-option>
+        <mat-option value="No">No</mat-option>
+      </mat-select>
+      <mat-label>IsSmart</mat-label>
+    </mat-form-field>
+    <div style="text-align: center;">
+      <button mat-raised-button color="primary" [disabled]="myForm.invalid" (click)="onSubmit()">Create Product</button>
+    </div>
+  </form>
+</div>
