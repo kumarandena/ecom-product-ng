@@ -103,7 +103,7 @@ export class DataService {
     }
 
     putProduct(data: productData): boolean {
-        this.products.push(data);
+        this.products.unshift(data);
         return true;
     }
 
