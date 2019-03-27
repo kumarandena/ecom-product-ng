@@ -5,11 +5,10 @@
 </mat-toolbar>
 
 <div class="example-container add-cus-div">
-  <form class="example-container" [formGroup]="myForm">
-
+  <form class="example-container" [formGroup]="productForm" (ngSubmit)="onSubmit()">
     <mat-form-field>
       <mat-label>Name</mat-label>
-      <input matInput placeholder="" required formControlName="name">
+      <input matInput placeholder="" formControlName="name">
     </mat-form-field>
 
     <mat-form-field>
@@ -18,24 +17,25 @@
     </mat-form-field>
 
     <mat-form-field>
-      <mat-label>Height</mat-label>
-      <input matInput placeholder="" formControlName="height">
-    </mat-form-field>
-
-    <mat-form-field>
       <mat-label>Width</mat-label>
       <input matInput placeholder="" formControlName="width">
     </mat-form-field>
 
     <mat-form-field>
-      <mat-select required formControlName="issmart">
+      <mat-label>Height</mat-label>
+      <input matInput placeholder="" formControlName="height">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select formControlName="issmart">
         <mat-option value="Yes">Yes</mat-option>
         <mat-option value="No">No</mat-option>
       </mat-select>
       <mat-label>IsSmart</mat-label>
     </mat-form-field>
     <div style="text-align: center;">
-      <button mat-raised-button color="primary" [disabled]="myForm.invalid" (click)="onSubmit()">Create Product</button>
+      <button mat-raised-button (click)="onBack()" style="margin-right: 20px;">Back</button>
+      <button mat-raised-button color="primary" [disabled]="productForm.invalid" type="submit">Submit</button>
     </div>
   </form>
 </div>

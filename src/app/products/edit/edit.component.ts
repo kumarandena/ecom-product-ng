@@ -1,14 +1,6 @@
-import { Component, OnInit, Inject } from '@angular/core';
-
+import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-
-export interface DialogData {
-    name: string;
-    description: string;
-    width: string;
-    height: string;
-    isSmart: string;
-}
+import { productData } from 'src/app/core/data.service';
 
 @Component({
   selector: 'app-edit',
@@ -16,11 +8,10 @@ export interface DialogData {
   styleUrls: ['./edit.component.css']
 })
 export class EditDialog {
-
+public d;
   constructor(
     public dialogRef: MatDialogRef<EditDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {
-    console.log("Received data : ", data)
+    @Inject(MAT_DIALOG_DATA) public data: productData) {
 }
 
 onNoClick(): void {
