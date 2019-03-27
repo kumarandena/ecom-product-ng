@@ -1,4 +1,8 @@
-# EcomProductNg
+# Angular web app with CRUD operations
+
+e-Commerce web app sample was built using Angular with limited operations like add, edit, and delete products.
+
+* Please note, You might lost added product data's while refreshing browser Since product data's manipulations happens with simple shared array.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
 
